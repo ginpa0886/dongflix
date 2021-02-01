@@ -35,7 +35,6 @@ const SLink = styled(Link)`
 
 
 function Header({ location: { pathname }}){
-  console.log({ location: { pathname }});
   return (
     <Headers>
       <List>
