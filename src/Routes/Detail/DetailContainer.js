@@ -14,8 +14,6 @@ export default class extends React.Component{
     };
   }
 
-  
-
   async componentDidMount(){
     const { match: { params: { id }}, history: { push }} = this.props;
     const { isMovie }= this.state;
@@ -30,7 +28,6 @@ export default class extends React.Component{
         
       } else{
         ({data: result} = await tvApi.showDetail(parseId));
-        
       }
     } catch{
       this.setState({
@@ -47,7 +44,7 @@ export default class extends React.Component{
   render(){
     // console.log(this.props);
     const { result, error, loading } = this.state;
-    console.log(result);
+    // console.log(result);
     return (
       <DetailPresenter 
         result={result}
