@@ -1,13 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Loader from 'Components/Loader';
+import Section from "Components/Section";
+
+
+const Container = styled.div`
+  padding: 0px 20px;
+`;
+
+const Form =styled.form`
+  margin-bottom:50px;
+  width:100%;
+`;
+
+const Input = styled.input`
+  all: unset;
+  font-size: 28px;
+  width:100%;
+`;
 
 const SearchPresenter = ({ movieResults,
   tvResults,
   searchTerm,
   error,
   loading,
-  handleSumitg }) => null;
+  handleSumit,
+  updateTerm }) => 
+    <Container>
+      <Form onSubmit={handleSumit}>
+        <Input placeholder="Search Movies or TV Shows" value={searchTerm} onChange={updateTerm} />
+      </Form>
+      {loading ? <Loader /> : 
+      <>
+        {movieResults && movieResults.length > 0 && <Section title="Movie Title">{movieResults.map(movie => <span key={movie.id}>{movie.title}</span>)}</Section>}
+        {tvResults && tvResults.length > 0 && <Section title="Show Title">{tvResults.map(show => <span key={show.id}>{show.name}</span>)}</Section>}
+      </>}
+    </Container>
+
 
   SearchPresenter.prototype = {
     movieResults:PropTypes.array,
@@ -15,7 +45,8 @@ const SearchPresenter = ({ movieResults,
     searchTerm:PropTypes.string,
     error:PropTypes.string,
     loading:PropTypes.bool.isRequired,
-    handleSumit:PropTypes.func.isRequired
+    handleSumit:PropTypes.func.isRequired,
+    updateTerm:PropTypes.func.isRequired
 }
 
 export default SearchPresenter;
