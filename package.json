@@ -31,7 +31,7 @@
       "react-app/jest"
     ]
   },
-  "homepage":"http://ginpa0886.github.io/dongflix", 
+  "homepage":"https://condescending-newton-5ab95a.netlify.app", 
   "browserslist": {
     "production": [
       ">0.2%",
