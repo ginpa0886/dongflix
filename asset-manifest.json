@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/dongflix/static/js/main.18d77f85.chunk.js",
-    "main.js.map": "/dongflix/static/js/main.18d77f85.chunk.js.map",
+    "main.js": "/dongflix/static/js/main.f8cd4bfb.chunk.js",
+    "main.js.map": "/dongflix/static/js/main.f8cd4bfb.chunk.js.map",
     "runtime-main.js": "/dongflix/static/js/runtime-main.467f1a29.js",
     "runtime-main.js.map": "/dongflix/static/js/runtime-main.467f1a29.js.map",
     "static/js/2.3efe9cac.chunk.js": "/dongflix/static/js/2.3efe9cac.chunk.js",
@@ -13,6 +13,6 @@
   "entrypoints": [
     "static/js/runtime-main.467f1a29.js",
     "static/js/2.3efe9cac.chunk.js",
-    "static/js/main.18d77f85.chunk.js"
+    "static/js/main.f8cd4bfb.chunk.js"
   ]
 }
