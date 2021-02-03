@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/ginpa0886.github.io/dongflix/static/js/main.6ff70912.chunk.js",
-    "main.js.map": "/ginpa0886.github.io/dongflix/static/js/main.6ff70912.chunk.js.map",
-    "runtime-main.js": "/ginpa0886.github.io/dongflix/static/js/runtime-main.287de5c8.js",
-    "runtime-main.js.map": "/ginpa0886.github.io/dongflix/static/js/runtime-main.287de5c8.js.map",
-    "static/js/2.843f9ad3.chunk.js": "/ginpa0886.github.io/dongflix/static/js/2.843f9ad3.chunk.js",
-    "static/js/2.843f9ad3.chunk.js.map": "/ginpa0886.github.io/dongflix/static/js/2.843f9ad3.chunk.js.map",
-    "index.html": "/ginpa0886.github.io/dongflix/index.html",
-    "static/js/2.843f9ad3.chunk.js.LICENSE.txt": "/ginpa0886.github.io/dongflix/static/js/2.843f9ad3.chunk.js.LICENSE.txt",
-    "static/media/univ.png": "/ginpa0886.github.io/dongflix/static/media/univ.6712c3cc.png"
+    "main.js": "/dongflix/static/js/main.9b394534.chunk.js",
+    "main.js.map": "/dongflix/static/js/main.9b394534.chunk.js.map",
+    "runtime-main.js": "/dongflix/static/js/runtime-main.467f1a29.js",
+    "runtime-main.js.map": "/dongflix/static/js/runtime-main.467f1a29.js.map",
+    "static/js/2.3efe9cac.chunk.js": "/dongflix/static/js/2.3efe9cac.chunk.js",
+    "static/js/2.3efe9cac.chunk.js.map": "/dongflix/static/js/2.3efe9cac.chunk.js.map",
+    "index.html": "/dongflix/index.html",
+    "static/js/2.3efe9cac.chunk.js.LICENSE.txt": "/dongflix/static/js/2.3efe9cac.chunk.js.LICENSE.txt",
+    "static/media/univ.png": "/dongflix/static/media/univ.6712c3cc.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.287de5c8.js",
-    "static/js/2.843f9ad3.chunk.js",
-    "static/js/main.6ff70912.chunk.js"
+    "static/js/runtime-main.467f1a29.js",
+    "static/js/2.3efe9cac.chunk.js",
+    "static/js/main.9b394534.chunk.js"
   ]
 }
