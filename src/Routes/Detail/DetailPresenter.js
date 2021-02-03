@@ -87,7 +87,7 @@ const DetailPresenter = ({ result,
         </Helmet>
         <Backdrop bgImg={`https://image.tmdb.org/t/p/original${result.backdrop_path}`} />
         <Content>
-          <Cover bgUrl={result.poster_path ? `https://image.tmdb.org/t/p/w300${result.poster_path}` : require("../../Assets/univ.png")} />
+          <Cover bgUrl={result.poster_path ? `https://image.tmdb.org/t/p/w300${result.poster_path}` : null} />
           <Data>
             <Title>{result.original_title ? result.original_title : result.original_name}</Title>
             <ItemContainer>

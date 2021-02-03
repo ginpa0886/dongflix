@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Routers, Route, Redirect, Switch } from "react-router-dom";
+import { HashRouter as Routers, Route, Redirect, Switch } from "react-router-dom";
 import Header from "Components/Header";
 import Home from "Routes/Home";
 import TV from "Routes/TV";
