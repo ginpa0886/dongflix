@@ -24,6 +24,7 @@ const Backdrop = styled.div`
   filter:blur(3px);
   opacity: 0.5;
   z-index: 0;
+  
 `;
 
 const Content = styled.div`
