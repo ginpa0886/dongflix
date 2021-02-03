@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 import Loader from 'Components/Loader';
 import Section from "Components/Section";
 import Message from 'Components/Message';
@@ -30,6 +31,9 @@ const SearchPresenter = ({ movieResults,
   handleSumit,
   updateTerm }) => 
     <Container>
+      <Helmet>
+        <title>Search | dongflix</title>
+      </Helmet>
       <Form onSubmit={handleSumit}>
         <Input placeholder="Search Movies or TV Shows" value={searchTerm} onChange={updateTerm} />
       </Form>
@@ -66,6 +70,7 @@ const SearchPresenter = ({ movieResults,
       {error && <Message color="#e74c3c" text={error} />}
       {tvResults && movieResults && tvResults.length === 0 && movieResults.length === 0 && <Message text="nothing found" color="#95a5a6" />}
     </Container>
+  
 
 
   SearchPresenter.prototype = {
