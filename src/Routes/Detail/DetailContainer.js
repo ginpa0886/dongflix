@@ -10,7 +10,8 @@ export default class extends React.Component{
       result: null,
       error: null,
       loading: true,
-      isMovie: pathname.includes("/movie/")
+      isMovie: pathname.includes("/movie/"),
+      video:`https://www.youtube.com/watch?v=`
     };
   }
 
@@ -44,13 +45,14 @@ export default class extends React.Component{
 
   render(){
     // console.log(this.props);
-    const { result, error, loading } = this.state;
+    const { result, error, loading, video } = this.state;
     // console.log(result);
     return (
       <DetailPresenter 
         result={result}
         error={error}
         loading={loading}
+        video={video}
       />
     )
   }

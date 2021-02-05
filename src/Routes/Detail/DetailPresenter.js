@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes, { string } from 'prop-types';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
+import { Link } from 'react-router-dom';
 import Loader from 'Components/Loader';
 import Message from 'Components/Message';
 
@@ -10,6 +11,27 @@ const Container = styled.div`
   width:100%;
   position:relative;
   padding: 50px;
+`;
+
+const TrailerLink = styled.a`
+  width: 150px;
+  height: 45px;
+  border: 1px solid rgb(211,211,211);
+  border-radius: 3px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  text-align: center;
+  padding-top: 12px;
+  font-weight: 700;
+  color: rgb(211,211,211);
+  transition: color 400ms ease-in-out, border 400ms ease-in-out, box-shadow 400ms ease-in-out;
+  &:hover{
+    color: white;
+    border: 2px solid white;
+    box-shadow: 17px 17px 34px #397ca3, 
+             -17px -17px 34px #71f6ff;
+  }
 `;
 
 const Backdrop = styled.div`
@@ -47,6 +69,7 @@ const Cover = styled.div`
 const Data = styled.div`
   width: 70%;
   margin-left: 10px;
+  position: relative;
 `;
 
 const Title = styled.h3`
@@ -55,10 +78,37 @@ const Title = styled.h3`
 
 const ItemContainer = styled.div`
   margin:20px 0;
+  position: relative;
 `;
 
 const Item = styled.span`
 
+`;
+
+const CompanyContainer = styled.div`
+  width: 200px;
+  height: 40px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+`;
+
+
+const Company = styled.div`
+  max-width:100px;
+  width: 20px;
+  height: 20px;
+  background-image: url(${props => props.bgIcon});
+  background-position: center center;
+  background-size: cover;
+  background-color: white;
+  margin-right: 5px;
+  &:last-child{
+    margin-right: 0px;
+  }
 `;
 
 const Divider = styled.span`
@@ -74,7 +124,7 @@ const Overview = styled.p`
 
 const DetailPresenter = ({ result,
   error,
-  loading }) => loading ? 
+  loading, video }) => loading ? 
   <>
     <Helmet>
         <title>loading | dongflix</title>
@@ -103,8 +153,18 @@ const DetailPresenter = ({ result,
               <Item>
                 {result.genres && result.genres.map((genre, index) => index === result.genres.length - 1 ? genre.name : `${genre.name} / `)}
               </Item>
+              <Divider>•</Divider>
+              <Item>
+                {result.production_countries && result.production_countries[0].name}
+              </Item>
             </ItemContainer>
             <Overview>{result.overview}</Overview>
+            <TrailerLink href={`${video}${result.videos.results[0].key}`}>Watch Trailer</TrailerLink>
+            <CompanyContainer>
+              {result.production_companies ? result.production_companies.map(logo => 
+                (<Company bgIcon={`https://image.tmdb.org/t/p/w300/${logo.logo_path}`}/>)
+                ) : null}
+            </CompanyContainer>
           </Data>
         </Content>
       </Container>
